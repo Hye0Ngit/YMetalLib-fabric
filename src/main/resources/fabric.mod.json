@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "ymetallib",
+  "version": "${version}",
+
+  "name": "YMetalLib",
+  "description": "Ingots, Plates, Ores!",
+  "authors": [
+    "yaeyewon112"
+  ],
+  "contact": {
+    "homepage": "http://yewonmods.kro.kr",
+    "sources": "https://github.com/yaeyewon112/ymetallib"
+  },
+
+  "license": "MIT",
+  "icon": "assets/ymetallib/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "kr.kro.yewonmods.ymetallib.Main"
+    ]
+  },
+  "mixins": [
+    "ymetallib.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

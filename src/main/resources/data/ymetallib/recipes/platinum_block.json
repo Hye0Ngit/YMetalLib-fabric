@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "tag": "c:platinum_ingots"
+    }
+  },
+  "result": {
+    "item": "ymetallib:platinum_block",
+    "count": 1
+  }
+}

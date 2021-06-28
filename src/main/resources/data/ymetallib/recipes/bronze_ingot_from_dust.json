@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "c:bronze_dusts"
+  },
+  "result": "ymetallib:bronze_ingot",
+  "experience": 1.00,
+  "cookingtime": 100
+}

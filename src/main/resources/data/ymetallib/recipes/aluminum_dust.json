@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:aluminum_ingots"
+    },
+    {
+      "tag": "ymetallib:hammers"
+    }
+  ],
+  "result": {
+    "item": "ymetallib:aluminum_dust",
+    "count": 1
+  }
+}

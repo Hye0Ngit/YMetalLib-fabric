@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    " C ",
+    " W "
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:gold_ingot"
+    },
+    "S": {
+      "tag": "ymetallib:hammers"
+    },
+    "W": {
+      "tag": "ymetallib:wrenches"
+    }
+  },
+  "result": {
+    "item": "ymetallib:gold_plate",
+    "count": 1
+  }
+}

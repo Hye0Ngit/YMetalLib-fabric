@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BBB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:aluminum_nuggets"
+    }
+  },
+  "result": {
+    "item": "ymetallib:aluminum_ingot",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "ymetallib:aluminum_mixture"
+  },
+  "result": "ymetallib:aluminum_ingot",
+  "experience": 1.00,
+  "cookingtime": 1000
+}

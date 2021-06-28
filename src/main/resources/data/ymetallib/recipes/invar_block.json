@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "tag": "c:invar_ingots"
+    }
+  },
+  "result": {
+    "item": "ymetallib:invar_block",
+    "count": 1
+  }
+}

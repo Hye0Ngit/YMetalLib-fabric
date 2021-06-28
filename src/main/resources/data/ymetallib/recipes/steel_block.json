@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "tag": "c:steel_ingots"
+    }
+  },
+  "result": {
+    "item": "ymetallib:steel_block",
+    "count": 1
+  }
+}

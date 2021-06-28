@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    " C ",
+    " W "
+  ],
+  "key": {
+    "C": {
+      "tag": "c:aluminum_ingots"
+    },
+    "S": {
+      "tag": "ymetallib:hammers"
+    },
+    "W": {
+      "tag": "ymetallib:wrenches"
+    }
+  },
+  "result": {
+    "item": "ymetallib:aluminum_plate",
+    "count": 1
+  }
+}

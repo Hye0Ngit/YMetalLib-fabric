@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:iron_dusts"
+    },
+    {
+      "tag": "c:carbon_dusts"
+    }
+  ],
+  "result": {
+    "item": "ymetallib:steel_mixture",
+    "count": 2
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BBB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:bronze_nuggets"
+    }
+  },
+  "result": {
+    "item": "ymetallib:bronze_ingot",
+    "count": 1
+  }
+}

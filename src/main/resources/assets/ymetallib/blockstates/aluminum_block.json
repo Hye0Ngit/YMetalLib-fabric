@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "ymetallib:block/aluminum_block" }
+  }
+}

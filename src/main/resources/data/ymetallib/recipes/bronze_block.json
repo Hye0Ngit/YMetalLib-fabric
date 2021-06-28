@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BBB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:bronze_ingots"
+    }
+  },
+  "result": {
+    "item": "ymetallib:bronze_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:copper_dusts"
+    },
+    {
+      "tag": "c:copper_dusts"
+    },
+    {
+      "tag": "c:copper_dusts"
+    },
+    {
+      "tag": "c:tin_dusts"
+    }
+  ],
+  "result": {
+    "item": "ymetallib:bronze_mixture",
+    "count": 4
+  }
+}

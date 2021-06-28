@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "tag": "c:aluminum_ingots"
+    }
+  },
+  "result": {
+    "item": "ymetallib:aluminum_block",
+    "count": 1
+  }
+}

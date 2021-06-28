@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BBB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:electrum_nuggets"
+    }
+  },
+  "result": {
+    "item": "ymetallib:electrum_ingot",
+    "count": 1
+  }
+}

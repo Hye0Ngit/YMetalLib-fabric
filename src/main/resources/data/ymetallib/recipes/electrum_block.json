@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "tag": "c:electrum_ingots"
+    }
+  },
+  "result": {
+    "item": "ymetallib:electrum_block",
+    "count": 1
+  }
+}

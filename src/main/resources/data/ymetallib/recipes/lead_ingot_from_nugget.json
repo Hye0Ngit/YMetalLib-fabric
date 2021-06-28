@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BBB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:lead_nuggets"
+    }
+  },
+  "result": {
+    "item": "ymetallib:lead_ingot",
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BBB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:invar_nuggets"
+    }
+  },
+  "result": {
+    "item": "ymetallib:invar_ingot",
+    "count": 1
+  }
+}

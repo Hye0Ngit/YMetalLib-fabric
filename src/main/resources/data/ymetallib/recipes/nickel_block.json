@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "tag": "c:nickel_ingots"
+    }
+  },
+  "result": {
+    "item": "ymetallib:nickel_block",
+    "count": 1
+  }
+}
