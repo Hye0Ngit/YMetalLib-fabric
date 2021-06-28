@@ -33,3 +33,15 @@ After finishing, Open IntelliJ IDEA and File-Open-Import Project and do what Int
 Open terminal and type ``gradlew vscode``
 
 After finishing, Open folder that includes YMetalLib-fabric and do what Visual Studio Code shows!
+
+## macOS, Linux
+Open terminal and type ``./gradlew genSources``
+
+**NEXT STEPS ARE DIFFERENT WITH IDEs!**
+
+### Eclipse
+Open terminal and type ``./gradlew genEclipseRuns``
+
+After finishing, type ``./gradlew eclipse``
+
+After finishing, Open Eclipse and File-Import-Gradle-Existing Gradle Project and do what Eclipse shows!
