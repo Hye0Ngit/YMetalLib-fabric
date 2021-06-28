@@ -6,7 +6,7 @@ Adds Aluminum, Bronze, Copper, Electrum, Gold, Invar, Lead, Nickel, Platinum, Si
 # Requirement for build
 **Java Version: 16.0.1 or higher**
 
-**IDE: Eclipse 2021-06 or higher**
+**IDE: Eclipse or IntelliJ IDEA or Visual Studio Code**
 
 # How to build
 
