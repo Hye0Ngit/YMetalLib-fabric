@@ -1,6 +1,11 @@
 {
     "replace": false,
     "values": [
-        "ymetallib:silver_ore"
+        "ymetallib:silver_ore",
+        "ymetallib:deepslate_silver_ore",
+        "ymetallib:diorite_silver_ore",
+        "ymetallib:granite_silver_ore",
+        "ymetallib:nether_silver_ore",
+        "ymetallib:end_silver_ore"
     ]
 }

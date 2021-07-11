@@ -1,6 +1,11 @@
 {
     "replace": false,
     "values": [
-        "ymetallib:nickel_ore"
+        "ymetallib:nickel_ore",
+        "ymetallib:deepslate_nickel_ore",
+        "ymetallib:diorite_nickel_ore",
+        "ymetallib:granite_nickel_ore",
+        "ymetallib:nether_nickel_ore",
+        "ymetallib:end_nickel_ore"
     ]
 }

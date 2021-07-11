@@ -1,6 +1,11 @@
 {
     "replace": false,
     "values": [
-        "ymetallib:lead_ore"
+        "ymetallib:lead_ore",
+        "ymetallib:deepslate_lead_ore",
+        "ymetallib:diorite_lead_ore",
+        "ymetallib:granite_lead_ore",
+        "ymetallib:nether_lead_ore",
+        "ymetallib:end_lead_ore"
     ]
 }

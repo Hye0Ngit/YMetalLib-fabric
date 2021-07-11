@@ -1,6 +1,11 @@
 {
     "replace": false,
     "values": [
-        "ymetallib:aluminum_ore"
+        "ymetallib:aluminum_ore",
+        "ymetallib:deepslate_aluminum_ore",
+        "ymetallib:diorite_aluminum_ore",
+        "ymetallib:granite_aluminum_ore",
+        "ymetallib:nether_aluminum_ore",
+        "ymetallib:end_aluminum_ore"
     ]
 }

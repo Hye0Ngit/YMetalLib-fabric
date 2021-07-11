@@ -1,6 +1,11 @@
 {
     "replace": false,
     "values": [
-        "ymetallib:tin_ore"
+        "ymetallib:tin_ore",
+        "ymetallib:deepslate_tin_ore",
+        "ymetallib:diorite_tin_ore",
+        "ymetallib:granite_tin_ore",
+        "ymetallib:nether_tin_ore",
+        "ymetallib:end_tin_ore"
     ]
 }

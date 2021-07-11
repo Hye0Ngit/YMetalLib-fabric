@@ -1,6 +1,11 @@
 {
     "replace": false,
     "values": [
-        "ymetallib:platinum_ore"
+        "ymetallib:platinum_ore",
+        "ymetallib:deepslate_platinum_ore",
+        "ymetallib:diorite_platinum_ore",
+        "ymetallib:granite_platinum_ore",
+        "ymetallib:nether_platinum_ore",
+        "ymetallib:end_platinum_ore"
     ]
 }
