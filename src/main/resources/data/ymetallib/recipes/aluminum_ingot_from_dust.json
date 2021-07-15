@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "ymetallib:aluminum_dusts"
+    "tag": "c:aluminum_dusts"
   },
   "result": "ymetallib:aluminum_ingot",
   "experience": 1.00,

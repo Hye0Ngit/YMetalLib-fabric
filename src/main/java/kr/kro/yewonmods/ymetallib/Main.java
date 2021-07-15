@@ -35,6 +35,10 @@ public class Main implements ModInitializer {
 	public static final ItemGroup YMETALLIBGROUP = FabricItemGroupBuilder.build(
 			new Identifier("ymetallib", "ymetallib_group"),
 			() -> new ItemStack(Items.IRON_INGOT));
+
+	//Hammer Wrench
+	public static final Item HAMMER = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item WRENCH = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
 	
 	//Blocks
 	public static final Block TIN_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(1.5F).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1));
@@ -143,6 +147,14 @@ public class Main implements ModInitializer {
 	public static final Block GRANITE_PLATINUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3.5F).requiresTool().breakByTool(FabricToolTags.PICKAXES, 3));
 	public static final Block GRANITE_NICKEL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0F).requiresTool().breakByTool(FabricToolTags.PICKAXES, 2));
 	public static final Block GRANITE_ALUMINUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.5F).requiresTool().breakByTool(FabricToolTags.PICKAXES, 2));
+
+	//Andesite Ores
+	public static final Block ANDESITE_TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1));
+	public static final Block ANDESITE_LEAD_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1));
+	public static final Block ANDESITE_SILVER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1));
+	public static final Block ANDESITE_PLATINUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3.5F).requiresTool().breakByTool(FabricToolTags.PICKAXES, 3));
+	public static final Block ANDESITE_NICKEL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0F).requiresTool().breakByTool(FabricToolTags.PICKAXES, 2));
+	public static final Block ANDESITE_ALUMINUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.5F).requiresTool().breakByTool(FabricToolTags.PICKAXES, 2));
 
 	//Nether Ores
 	public static final Block NETHER_TIN_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(1.5F).requiresTool().breakByTool(FabricToolTags.PICKAXES, 1));
@@ -384,6 +396,62 @@ public class Main implements ModInitializer {
 			.spreadHorizontally()
 			.repeat(2);
 
+	//Andesite Ore Generation
+	private static ConfiguredFeature<?, ?> ORE_TIN_ANDESITE = Feature.ORE
+			.configure(new OreFeatureConfig(
+					new BlockMatchRuleTest(Blocks.ANDESITE),
+					ANDESITE_TIN_ORE.getDefaultState(),
+					8))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(20))))
+			.spreadHorizontally()
+			.repeat(5);
+	private static ConfiguredFeature<?, ?> ORE_LEAD_ANDESITE = Feature.ORE
+			.configure(new OreFeatureConfig(
+					new BlockMatchRuleTest(Blocks.ANDESITE),
+					ANDESITE_LEAD_ORE.getDefaultState(),
+					8))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(20))))
+			.spreadHorizontally()
+			.repeat(5);
+	private static ConfiguredFeature<?, ?> ORE_SILVER_ANDESITE = Feature.ORE
+			.configure(new OreFeatureConfig(
+					new BlockMatchRuleTest(Blocks.ANDESITE),
+					ANDESITE_SILVER_ORE.getDefaultState(),
+					8))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(20))))
+			.spreadHorizontally()
+			.repeat(5);
+	private static ConfiguredFeature<?, ?> ORE_PLATINUM_ANDESITE = Feature.ORE
+			.configure(new OreFeatureConfig(
+					new BlockMatchRuleTest(Blocks.ANDESITE),
+					ANDESITE_PLATINUM_ORE.getDefaultState(),
+					1))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(10))))
+			.spreadHorizontally()
+			.repeat(1);
+	private static ConfiguredFeature<?, ?> ORE_NICKEL_ANDESITE = Feature.ORE
+			.configure(new OreFeatureConfig(
+					new BlockMatchRuleTest(Blocks.ANDESITE),
+					ANDESITE_NICKEL_ORE.getDefaultState(),
+					4))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(20), YOffset.fixed(60))))
+			.spreadHorizontally()
+			.repeat(3);
+	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_ANDESITE = Feature.ORE
+			.configure(new OreFeatureConfig(
+					new BlockMatchRuleTest(Blocks.ANDESITE),
+					ANDESITE_ALUMINUM_ORE.getDefaultState(),
+					6))
+			.range(new RangeDecoratorConfig(
+					UniformHeightProvider.create(YOffset.aboveBottom(20), YOffset.fixed(40))))
+			.spreadHorizontally()
+			.repeat(2);
+
 	//Nether Ore Generation
 	private static ConfiguredFeature<?, ?> ORE_TIN_NETHER = Feature.ORE
 			.configure(new OreFeatureConfig(
@@ -498,6 +566,10 @@ public class Main implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		//Hammer Wrench
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "hammer"), HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "wrench"), WRENCH);
 		
 		//Blocks
 		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "tin_block"), TIN_BLOCK);
@@ -641,6 +713,20 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("ymetallib", "granite_nickel_ore"), new BlockItem(GRANITE_NICKEL_ORE, new FabricItemSettings().group(Main.YMETALLIBGROUP)));
 		Registry.register(Registry.ITEM, new Identifier("ymetallib", "granite_aluminum_ore"), new BlockItem(GRANITE_ALUMINUM_ORE, new FabricItemSettings().group(Main.YMETALLIBGROUP)));
 
+		//Andesite Ores
+		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "andesite_tin_ore"), ANDESITE_TIN_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "andesite_lead_ore"), ANDESITE_LEAD_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "andesite_silver_ore"), ANDESITE_SILVER_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "andesite_platinum_ore"), ANDESITE_PLATINUM_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "andesite_nickel_ore"), ANDESITE_NICKEL_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "andesite_aluminum_ore"), ANDESITE_ALUMINUM_ORE);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "andesite_tin_ore"), new BlockItem(ANDESITE_TIN_ORE, new FabricItemSettings().group(Main.YMETALLIBGROUP)));
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "andesite_lead_ore"), new BlockItem(ANDESITE_LEAD_ORE, new FabricItemSettings().group(Main.YMETALLIBGROUP)));
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "andesite_silver_ore"), new BlockItem(ANDESITE_SILVER_ORE, new FabricItemSettings().group(Main.YMETALLIBGROUP)));
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "andesite_platinum_ore"), new BlockItem(ANDESITE_PLATINUM_ORE, new FabricItemSettings().group(Main.YMETALLIBGROUP)));
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "andesite_nickel_ore"), new BlockItem(ANDESITE_NICKEL_ORE, new FabricItemSettings().group(Main.YMETALLIBGROUP)));
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "andesite_aluminum_ore"), new BlockItem(ANDESITE_ALUMINUM_ORE, new FabricItemSettings().group(Main.YMETALLIBGROUP)));
+
 		//Nether Ores
 		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "nether_tin_ore"), NETHER_TIN_ORE);
 		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "nether_lead_ore"), NETHER_LEAD_ORE);
@@ -772,6 +858,32 @@ public class Main implements ModInitializer {
 				new Identifier("ymetallib", "ore_aluminum_granite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAluminumGranite.getValue(), ORE_ALUMINUM_GRANITE);
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumGranite);
+
+		//Andesite Ore Generation
+		RegistryKey<ConfiguredFeature<?, ?>> oreTinAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("ymetallib", "ore_tin_andesite"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTinAndesite.getValue(), ORE_TIN_ANDESITE);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinAndesite);
+		RegistryKey<ConfiguredFeature<?, ?>> oreLeadAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("ymetallib", "ore_lead_andesite"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreLeadAndesite.getValue(), ORE_LEAD_ANDESITE);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadAndesite);
+		RegistryKey<ConfiguredFeature<?, ?>> oreSilverAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("ymetallib", "ore_silver_andesite"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSilverAndesite.getValue(), ORE_SILVER_ANDESITE);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverAndesite);
+		RegistryKey<ConfiguredFeature<?, ?>> orePlatinumAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("ymetallib", "ore_platinum_andesite"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePlatinumAndesite.getValue(), ORE_PLATINUM_ANDESITE);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumAndesite);
+		RegistryKey<ConfiguredFeature<?, ?>> oreNickelAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("ymetallib", "ore_nickel_andesite"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreNickelAndesite.getValue(), ORE_NICKEL_ANDESITE);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelAndesite);
+		RegistryKey<ConfiguredFeature<?, ?>> oreAluminumAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("ymetallib", "ore_aluminum_andesite"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAluminumAndesite.getValue(), ORE_ALUMINUM_ANDESITE);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumAndesite);
 
 		//End Ore Generation
 		RegistryKey<ConfiguredFeature<?, ?>> oreTinEnd = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,

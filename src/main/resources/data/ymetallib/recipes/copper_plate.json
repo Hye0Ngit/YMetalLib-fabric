@@ -7,7 +7,7 @@
   ],
   "key": {
     "C": {
-      "item": "minecraft:copper_ingot"
+      "tag": "c:copper_ingots"
     },
     "S": {
       "tag": "ymetallib:hammers"

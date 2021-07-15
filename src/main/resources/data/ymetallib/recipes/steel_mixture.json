@@ -5,7 +5,7 @@
       "tag": "c:iron_dusts"
     },
     {
-      "tag": "c:carbon_dusts"
+      "item": "ymetallib:carbon_dust"
     }
   ],
   "result": {
