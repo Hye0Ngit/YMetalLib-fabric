@@ -1,13 +1,13 @@
 package kr.kro.yewonmods.ymetallib;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
-import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+//import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+//import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
-import net.fabricmc.fabric.impl.biome.modification.BiomeSelectionContextImpl;
+//import net.fabricmc.fabric.impl.biome.modification.BiomeSelectionContextImpl;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -759,183 +759,183 @@ public class Main implements ModInitializer {
 		RegistryKey<ConfiguredFeature<?, ?>> oreTinStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_tin_stone"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTinStone.getValue(), ORE_TIN_STONE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinStone);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinStone);
 		RegistryKey<ConfiguredFeature<?, ?>> oreLeadStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_lead_stone"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreLeadStone.getValue(), ORE_LEAD_STONE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadStone);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadStone);
 		RegistryKey<ConfiguredFeature<?, ?>> oreSilverStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_silver_stone"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSilverStone.getValue(), ORE_SILVER_STONE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverStone);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverStone);
 		RegistryKey<ConfiguredFeature<?, ?>> orePlatinumStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_platinum_stone"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePlatinumStone.getValue(), ORE_PLATINUM_STONE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumStone);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumStone);
 		RegistryKey<ConfiguredFeature<?, ?>> oreNickelStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_nickel_stone"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreNickelStone.getValue(), ORE_NICKEL_STONE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelStone);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelStone);
 		RegistryKey<ConfiguredFeature<?, ?>> oreAluminumStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_aluminum_stone"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAluminumStone.getValue(), ORE_ALUMINUM_STONE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumStone);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumStone);
 
 		//Deepslate Ore Generation
 		RegistryKey<ConfiguredFeature<?, ?>> oreTinDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_tin_deepslate"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTinDeepslate.getValue(), ORE_TIN_DEEPSLATE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinDeepslate);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinDeepslate);
 		RegistryKey<ConfiguredFeature<?, ?>> oreLeadDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_lead_deepslate"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreLeadDeepslate.getValue(), ORE_LEAD_DEEPSLATE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadDeepslate);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadDeepslate);
 		RegistryKey<ConfiguredFeature<?, ?>> oreSilverDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_silver_deepslate"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSilverDeepslate.getValue(), ORE_SILVER_DEEPSLATE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverDeepslate);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverDeepslate);
 		RegistryKey<ConfiguredFeature<?, ?>> orePlatinumDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_platinum_deepslate"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePlatinumDeepslate.getValue(), ORE_PLATINUM_DEEPSLATE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumDeepslate);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumDeepslate);
 		RegistryKey<ConfiguredFeature<?, ?>> oreNickelDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_nickel_deepslate"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreNickelDeepslate.getValue(), ORE_NICKEL_DEEPSLATE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelDeepslate);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelDeepslate);
 		RegistryKey<ConfiguredFeature<?, ?>> oreAluminumDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_aluminum_deepslate"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAluminumDeepslate.getValue(), ORE_ALUMINUM_DEEPSLATE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumDeepslate);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumDeepslate);
 
 		//Diorite Ore Generation
 		RegistryKey<ConfiguredFeature<?, ?>> oreTinDiorite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_tin_diorite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTinDiorite.getValue(), ORE_TIN_DIORITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinDiorite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinDiorite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreLeadDiorite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_lead_diorite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreLeadDiorite.getValue(), ORE_LEAD_DIORITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadDiorite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadDiorite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreSilverDiorite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_silver_diorite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSilverDiorite.getValue(), ORE_SILVER_DIORITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverDiorite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverDiorite);
 		RegistryKey<ConfiguredFeature<?, ?>> orePlatinumDiorite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_platinum_diorite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePlatinumDiorite.getValue(), ORE_PLATINUM_DIORITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumDiorite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumDiorite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreNickelDiorite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_nickel_diorite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreNickelDiorite.getValue(), ORE_NICKEL_DIORITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelDiorite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelDiorite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreAluminumDiorite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_aluminum_diorite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAluminumDiorite.getValue(), ORE_ALUMINUM_DIORITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumDiorite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumDiorite);
 
 		//Granite Ore Generation
 		RegistryKey<ConfiguredFeature<?, ?>> oreTinGranite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_tin_granite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTinGranite.getValue(), ORE_TIN_GRANITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinGranite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinGranite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreLeadGranite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_lead_granite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreLeadGranite.getValue(), ORE_LEAD_GRANITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadGranite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadGranite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreSilverGranite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_silver_granite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSilverGranite.getValue(), ORE_SILVER_GRANITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverGranite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverGranite);
 		RegistryKey<ConfiguredFeature<?, ?>> orePlatinumGranite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_platinum_granite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePlatinumGranite.getValue(), ORE_PLATINUM_GRANITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumGranite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumGranite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreNickelGranite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_nickel_granite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreNickelGranite.getValue(), ORE_NICKEL_GRANITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelGranite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelGranite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreAluminumGranite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_aluminum_granite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAluminumGranite.getValue(), ORE_ALUMINUM_GRANITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumGranite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumGranite);
 
 		//Andesite Ore Generation
 		RegistryKey<ConfiguredFeature<?, ?>> oreTinAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_tin_andesite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTinAndesite.getValue(), ORE_TIN_ANDESITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinAndesite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinAndesite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreLeadAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_lead_andesite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreLeadAndesite.getValue(), ORE_LEAD_ANDESITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadAndesite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadAndesite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreSilverAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_silver_andesite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSilverAndesite.getValue(), ORE_SILVER_ANDESITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverAndesite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverAndesite);
 		RegistryKey<ConfiguredFeature<?, ?>> orePlatinumAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_platinum_andesite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePlatinumAndesite.getValue(), ORE_PLATINUM_ANDESITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumAndesite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumAndesite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreNickelAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_nickel_andesite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreNickelAndesite.getValue(), ORE_NICKEL_ANDESITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelAndesite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelAndesite);
 		RegistryKey<ConfiguredFeature<?, ?>> oreAluminumAndesite = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_aluminum_andesite"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAluminumAndesite.getValue(), ORE_ALUMINUM_ANDESITE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumAndesite);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumAndesite);
 
 		//End Ore Generation
 		RegistryKey<ConfiguredFeature<?, ?>> oreTinEnd = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_tin_end"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTinEnd.getValue(), ORE_TIN_END);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinEnd);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinEnd);
 		RegistryKey<ConfiguredFeature<?, ?>> oreLeadEnd = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_lead_end"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreLeadEnd.getValue(), ORE_LEAD_END);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadEnd);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadEnd);
 		RegistryKey<ConfiguredFeature<?, ?>> oreSilverEnd = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_silver_end"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSilverEnd.getValue(), ORE_SILVER_END);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverEnd);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverEnd);
 		RegistryKey<ConfiguredFeature<?, ?>> orePlatinumEnd = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_platinum_end"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePlatinumEnd.getValue(), ORE_PLATINUM_END);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumEnd);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumEnd);
 		RegistryKey<ConfiguredFeature<?, ?>> oreNickelEnd = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_nickel_end"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreNickelEnd.getValue(), ORE_NICKEL_END);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelEnd);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelEnd);
 		RegistryKey<ConfiguredFeature<?, ?>> oreAluminumEnd = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_aluminum_end"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAluminumEnd.getValue(), ORE_ALUMINUM_END);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumEnd);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumEnd);
 
 		//Nether Ore Generation
 		RegistryKey<ConfiguredFeature<?, ?>> oreTinNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_tin_nether"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTinNether.getValue(), ORE_TIN_NETHER);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinNether);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinNether);
 		RegistryKey<ConfiguredFeature<?, ?>> oreLeadNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_lead_nether"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreLeadNether.getValue(), ORE_LEAD_NETHER);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadNether);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreLeadNether);
 		RegistryKey<ConfiguredFeature<?, ?>> oreSilverNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_silver_nether"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSilverNether.getValue(), ORE_SILVER_NETHER);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverNether);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverNether);
 		RegistryKey<ConfiguredFeature<?, ?>> orePlatinumNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_platinum_nether"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePlatinumNether.getValue(), ORE_PLATINUM_NETHER);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumNether);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumNether);
 		RegistryKey<ConfiguredFeature<?, ?>> oreNickelNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_nickel_nether"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreNickelNether.getValue(), ORE_NICKEL_NETHER);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelNether);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreNickelNether);
 		RegistryKey<ConfiguredFeature<?, ?>> oreAluminumNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 				new Identifier("ymetallib", "ore_aluminum_nether"));
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAluminumNether.getValue(), ORE_ALUMINUM_NETHER);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumNether);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumNether);
 	}
 
 }

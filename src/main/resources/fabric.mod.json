@@ -3,8 +3,8 @@
   "id": "ymetallib",
   "version": "${version}",
 
-  "name": "YMetalLib",
-  "description": "Ingots, Plates, Ores!",
+  "name": "YMetalLib Experimental",
+  "description": "Ingots, Plates, Ores! Experimental version of YMetalLib",
   "authors": [
     "yaeyewon112"
   ],
@@ -29,7 +29,7 @@
   "depends": {
     "fabricloader": ">=0.11.6",
     "fabric": "*",
-    "minecraft": "1.17.x",
+    "minecraft": "1.18.x",
     "java": ">=16"
   },
   "suggests": {
