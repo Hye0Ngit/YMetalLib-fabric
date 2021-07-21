@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "ymetallib:titanium_ore",
+        "ymetallib:deepslate_titanium_ore",
+        "ymetallib:diorite_titanium_ore",
+        "ymetallib:granite_titanium_ore",
+        "ymetallib:andesite_titanium_ore",
+        "ymetallib:nether_titanium_ore",
+        "ymetallib:end_titanium_ore"
+    ]
+}
