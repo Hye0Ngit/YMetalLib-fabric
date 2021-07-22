@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    " C ",
+    " W "
+  ],
+  "key": {
+    "C": {
+      "tag": "c:titanium_ingots"
+    },
+    "S": {
+      "tag": "ymetallib:hammers"
+    },
+    "W": {
+      "tag": "ymetallib:wrenches"
+    }
+  },
+  "result": {
+    "item": "ymetallib:titanium_plate",
+    "count": 1
+  }
+}

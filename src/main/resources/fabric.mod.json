@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "YMetalLib Experimental",
-  "description": "Ingots, Plates, Ores! Experimental version of YMetalLib",
+  "description": "Ingots, Plates, Ores! Experimental release of YMetalLib",
   "authors": [
     "yaeyewon112"
   ],
