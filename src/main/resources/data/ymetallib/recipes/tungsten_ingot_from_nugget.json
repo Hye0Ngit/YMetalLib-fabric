@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BBB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:tungsten_nuggets"
+    }
+  },
+  "result": {
+    "item": "ymetallib:tungsten_ingot",
+    "count": 1
+  }
+}

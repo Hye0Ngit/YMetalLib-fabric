@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TTT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "tag": "c:tungsten_ingots"
+    }
+  },
+  "result": {
+    "item": "ymetallib:tungsten_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " TT",
+    "T T",
+    "TT "
+  ],
+  "key": {
+    "T": {
+      "tag": "c:tin_plates"
+    }
+  },
+  "result": {
+    "item": "ymetallib:tin_can",
+    "count": 1
+  }
+}
