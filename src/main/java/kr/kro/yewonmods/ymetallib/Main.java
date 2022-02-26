@@ -146,14 +146,14 @@ public class Main implements ModInitializer {
 	public static final Block TUNGSTEN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(5.0F).requiresTool());
 
 	//Deepslate Ores
-	public static final Block DEEPSLATE_TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F).requiresTool());
-	public static final Block DEEPSLATE_LEAD_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F).requiresTool());
-	public static final Block DEEPSLATE_SILVER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F).requiresTool());
-	public static final Block DEEPSLATE_PLATINUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(6.0F).requiresTool());
-	public static final Block DEEPSLATE_NICKEL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(4.0F).requiresTool());
-	public static final Block DEEPSLATE_ALUMINUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(5.0F).requiresTool());
-	public static final Block DEEPSLATE_TITANIUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(6.5F).requiresTool());
-	public static final Block DEEPSLATE_TUNGSTEN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(7.5F).requiresTool());
+	public static final Block DEEPSLATE_TIN_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(3.0F).requiresTool());
+	public static final Block DEEPSLATE_LEAD_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(3.0F).requiresTool());
+	public static final Block DEEPSLATE_SILVER_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(3.0F).requiresTool());
+	public static final Block DEEPSLATE_PLATINUM_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(6.0F).requiresTool());
+	public static final Block DEEPSLATE_NICKEL_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(4.0F).requiresTool());
+	public static final Block DEEPSLATE_ALUMINUM_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(5.0F).requiresTool());
+	public static final Block DEEPSLATE_TITANIUM_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(6.5F).requiresTool());
+	public static final Block DEEPSLATE_TUNGSTEN_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(7.5F).requiresTool());
 
 	//Diorite Ores
 	public static final Block DIORITE_TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F).requiresTool());

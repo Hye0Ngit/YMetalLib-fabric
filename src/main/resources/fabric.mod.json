@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "YMetalLib",
-  "description": "Ingots, Plates, Ores! Experimental release of YMetalLib",
+  "description": "Ingots, Plates, Ores! All about metals.",
   "authors": [
     "Hye0Ngit"
   ],
   "contact": {
-    "homepage": "https://yewonmvn.kro.kr",
-    "sources": "https://github.com/yaeyewon112/ymetallib"
+    "homepage": "https://www.yewonmvn.kro.kr",
+    "sources": "https://github.com/Hye0Ngit/ymetallib"
   },
 
   "license": "MIT",
