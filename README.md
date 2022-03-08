@@ -3,10 +3,8 @@
 
 Adds Aluminum, Bronze, Copper, Electrum, Gold, Invar, Lead, Nickel, Platinum, Silver, Steel, Tin Ingots, Plates, Ores, Nuggets, Dusts, Mixtures to alloy, Carbon Dust for steelmaking, etc.
 
-There are more metals and dusts updated!
-
 # Requirement for build
-**Java Version: 17.0.1 or higher**
+**Java Version: 16.0.2 or higher**
 
 **IDE: Eclipse or IntelliJ IDEA or Visual Studio Code**
 

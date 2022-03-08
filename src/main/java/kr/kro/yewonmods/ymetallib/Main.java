@@ -14,16 +14,19 @@ import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.decorator.CountPlacementModifier;
-import net.minecraft.world.gen.decorator.HeightRangePlacementModifier;
-import net.minecraft.world.gen.decorator.SquarePlacementModifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.placementmodifier.CountPlacementModifier;
+import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
+import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
+
+import java.util.Arrays;
 
 public class Main implements ModInitializer {
 	
@@ -146,14 +149,14 @@ public class Main implements ModInitializer {
 	public static final Block TUNGSTEN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(5.0F).requiresTool());
 
 	//Deepslate Ores
-	public static final Block DEEPSLATE_TIN_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(3.0F).requiresTool());
-	public static final Block DEEPSLATE_LEAD_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(3.0F).requiresTool());
-	public static final Block DEEPSLATE_SILVER_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(3.0F).requiresTool());
-	public static final Block DEEPSLATE_PLATINUM_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(6.0F).requiresTool());
-	public static final Block DEEPSLATE_NICKEL_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(4.0F).requiresTool());
-	public static final Block DEEPSLATE_ALUMINUM_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(5.0F).requiresTool());
-	public static final Block DEEPSLATE_TITANIUM_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(6.5F).requiresTool());
-	public static final Block DEEPSLATE_TUNGSTEN_ORE = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(7.5F).requiresTool());
+	public static final Block DEEPSLATE_TIN_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(3.0F).requiresTool());
+	public static final Block DEEPSLATE_LEAD_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(3.0F).requiresTool());
+	public static final Block DEEPSLATE_SILVER_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(3.0F).requiresTool());
+	public static final Block DEEPSLATE_PLATINUM_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(6.0F).requiresTool());
+	public static final Block DEEPSLATE_NICKEL_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(4.0F).requiresTool());
+	public static final Block DEEPSLATE_ALUMINUM_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(5.0F).requiresTool());
+	public static final Block DEEPSLATE_TITANIUM_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(6.5F).requiresTool());
+	public static final Block DEEPSLATE_TUNGSTEN_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(7.5F).requiresTool());
 
 	//Diorite Ores
 	public static final Block DIORITE_TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F).requiresTool());
@@ -186,13 +189,13 @@ public class Main implements ModInitializer {
 	public static final Block ANDESITE_TUNGSTEN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(5.0F).requiresTool());
 
 	//Nether Ores
-	public static final Block NETHER_TIN_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(1.5F).requiresTool());
-	public static final Block NETHER_LEAD_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(1.5F).requiresTool());
-	public static final Block NETHER_SILVER_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(1.5F).requiresTool());
-	public static final Block NETHER_PLATINUM_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(3.5F).requiresTool());
-	public static final Block NETHER_NICKEL_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(2.0F).requiresTool());
-	public static final Block NETHER_ALUMINUM_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(2.5F).requiresTool());
-	public static final Block NETHER_TITANIUM_ORE = new Block(FabricBlockSettings.of(Material.NETHER_SHOOTS).strength(4.0F).requiresTool());
+	public static final Block NETHER_TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F).requiresTool());
+	public static final Block NETHER_LEAD_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F).requiresTool());
+	public static final Block NETHER_SILVER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F).requiresTool());
+	public static final Block NETHER_PLATINUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(3.5F).requiresTool());
+	public static final Block NETHER_NICKEL_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0F).requiresTool());
+	public static final Block NETHER_ALUMINUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.5F).requiresTool());
+	public static final Block NETHER_TITANIUM_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(4.0F).requiresTool());
 	public static final Block NETHER_TUNGSTEN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(5.0F).requiresTool());
 
 	//End Ores
@@ -206,627 +209,795 @@ public class Main implements ModInitializer {
 	public static final Block END_TUNGSTEN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(5.0F).requiresTool());
 
 	//Stone Ore Generation
-	private static ConfiguredFeature<?, ?> ORE_TIN_STONE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TIN_STONE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.STONE),
 					TIN_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_TIN_STONE_PLACED = ORE_TIN_STONE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_TIN_STONE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TIN_STONE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_LEAD_STONE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_LEAD_STONE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.STONE),
 					LEAD_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_LEAD_STONE_PLACED = ORE_LEAD_STONE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_LEAD_STONE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_LEAD_STONE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_SILVER_STONE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_SILVER_STONE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.STONE),
 					SILVER_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_SILVER_STONE_PLACED = ORE_SILVER_STONE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_SILVER_STONE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_SILVER_STONE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_PLATINUM_STONE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_PLATINUM_STONE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.STONE),
 					PLATINUM_ORE.getDefaultState(),
-					1));
+					1)); // vein size
 
-	public static PlacedFeature ORE_PLATINUM_STONE_PLACED = ORE_PLATINUM_STONE.withPlacement(
-			CountPlacementModifier.of(1),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10)));
+	public static PlacedFeature ORE_PLATINUM_STONE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_PLATINUM_STONE),
+			Arrays.asList(
+					CountPlacementModifier.of(1), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_NICKEL_STONE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_NICKEL_STONE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.STONE),
 					NICKEL_ORE.getDefaultState(),
-					4));
+					4)); // vein size
 
-	public static PlacedFeature ORE_NICKEL_STONE_PLACED = ORE_NICKEL_STONE.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(60)));
+	public static PlacedFeature ORE_NICKEL_STONE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_NICKEL_STONE),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(60))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_STONE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_STONE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.STONE),
 					ALUMINUM_ORE.getDefaultState(),
-					6));
+					6)); // vein size
 
-	public static PlacedFeature ORE_ALUMINUM_STONE_PLACED = ORE_ALUMINUM_STONE.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(40)));
+	public static PlacedFeature ORE_ALUMINUM_STONE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_ALUMINUM_STONE),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(40))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TITANIUM_STONE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TITANIUM_STONE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.STONE),
 					TITANIUM_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TITANIUM_STONE_PLACED = ORE_TITANIUM_STONE.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10)));
+	public static PlacedFeature ORE_TITANIUM_STONE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TITANIUM_STONE),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_STONE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_STONE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.STONE),
 					TUNGSTEN_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TUNGSTEN_STONE_PLACED = ORE_TUNGSTEN_STONE.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(5)));
+	public static PlacedFeature ORE_TUNGSTEN_STONE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TUNGSTEN_STONE),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(5))
+			)); // height
 
 	//Deepslate Ore Generation
-	private static ConfiguredFeature<?, ?> ORE_TIN_DEEPSLATE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TIN_DEEPSLATE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DEEPSLATE),
 					DEEPSLATE_TIN_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_TIN_DEEPSLATE_PLACED = ORE_TIN_DEEPSLATE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-20), YOffset.fixed(0)));
+	public static PlacedFeature ORE_TIN_DEEPSLATE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TIN_DEEPSLATE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-20), YOffset.fixed(0))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_LEAD_DEEPSLATE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_LEAD_DEEPSLATE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DEEPSLATE),
 					DEEPSLATE_LEAD_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_LEAD_DEEPSLATE_PLACED = ORE_LEAD_DEEPSLATE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-20), YOffset.fixed(0)));
+	public static PlacedFeature ORE_LEAD_DEEPSLATE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_LEAD_DEEPSLATE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-20), YOffset.fixed(0))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_SILVER_DEEPSLATE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_SILVER_DEEPSLATE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DEEPSLATE),
 					DEEPSLATE_SILVER_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_SILVER_DEEPSLATE_PLACED = ORE_SILVER_DEEPSLATE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-30), YOffset.fixed(0)));
+	public static PlacedFeature ORE_SILVER_DEEPSLATE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_SILVER_DEEPSLATE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-30), YOffset.fixed(0))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_PLATINUM_DEEPSLATE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_PLATINUM_DEEPSLATE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DEEPSLATE),
 					DEEPSLATE_PLATINUM_ORE.getDefaultState(),
-					1));
+					1)); // vein size
 
-	public static PlacedFeature ORE_PLATINUM_DEEPSLATE_PLACED = ORE_PLATINUM_DEEPSLATE.withPlacement(
-			CountPlacementModifier.of(1),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-64), YOffset.fixed(0)));
+	public static PlacedFeature ORE_PLATINUM_DEEPSLATE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_PLATINUM_DEEPSLATE),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-64), YOffset.fixed(0))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_NICKEL_DEEPSLATE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_NICKEL_DEEPSLATE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DEEPSLATE),
 					DEEPSLATE_NICKEL_ORE.getDefaultState(),
-					4));
+					4)); // vein size
 
-	public static PlacedFeature ORE_NICKEL_DEEPSLATE_PLACED = ORE_NICKEL_DEEPSLATE.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-36), YOffset.fixed(0)));
+	public static PlacedFeature ORE_NICKEL_DEEPSLATE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_NICKEL_DEEPSLATE),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-36), YOffset.fixed(0))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_DEEPSLATE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_DEEPSLATE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DEEPSLATE),
 					DEEPSLATE_ALUMINUM_ORE.getDefaultState(),
-					6));
+					6)); // vein size
 
-	public static PlacedFeature ORE_ALUMINUM_DEEPSLATE_PLACED = ORE_ALUMINUM_DEEPSLATE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-20), YOffset.fixed(0)));
+	public static PlacedFeature ORE_ALUMINUM_DEEPSLATE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_ALUMINUM_DEEPSLATE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-20), YOffset.fixed(0))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TITANIUM_DEEPSLATE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TITANIUM_DEEPSLATE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DEEPSLATE),
 					DEEPSLATE_TITANIUM_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TITANIUM_DEEPSLATE_PLACED = ORE_TITANIUM_DEEPSLATE.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-64), YOffset.fixed(0)));
+	public static PlacedFeature ORE_TITANIUM_DEEPSLATE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TITANIUM_DEEPSLATE),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-64), YOffset.fixed(0))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_DEEPSLATE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_DEEPSLATE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DEEPSLATE),
 					DEEPSLATE_TUNGSTEN_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TUNGSTEN_DEEPSLATE_PLACED = ORE_TUNGSTEN_DEEPSLATE.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-64), YOffset.fixed(0)));
+	public static PlacedFeature ORE_TUNGSTEN_DEEPSLATE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TUNGSTEN_DEEPSLATE),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-64), YOffset.fixed(0))
+			)); // height
 
 	//Diorite Ore Generation
-	private static ConfiguredFeature<?, ?> ORE_TIN_DIORITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TIN_DIORITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DIORITE),
 					DIORITE_TIN_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_TIN_DIORITE_PLACED = ORE_TIN_DIORITE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_TIN_DIORITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TIN_DIORITE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_LEAD_DIORITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_LEAD_DIORITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DIORITE),
 					DIORITE_LEAD_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_LEAD_DIORITE_PLACED = ORE_LEAD_DIORITE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_LEAD_DIORITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_LEAD_DIORITE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_SILVER_DIORITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_SILVER_DIORITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DIORITE),
 					DIORITE_SILVER_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_SILVER_DIORITE_PLACED = ORE_SILVER_DIORITE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_SILVER_DIORITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_SILVER_DIORITE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_PLATINUM_DIORITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_PLATINUM_DIORITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DIORITE),
 					DIORITE_PLATINUM_ORE.getDefaultState(),
-					1));
+					1)); // vein size
 
-	public static PlacedFeature ORE_PLATINUM_DIORITE_PLACED = ORE_PLATINUM_DIORITE.withPlacement(
-			CountPlacementModifier.of(1),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10)));
+	public static PlacedFeature ORE_PLATINUM_DIORITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_PLATINUM_DIORITE),
+			Arrays.asList(
+					CountPlacementModifier.of(1), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_NICKEL_DIORITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_NICKEL_DIORITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DIORITE),
 					DIORITE_NICKEL_ORE.getDefaultState(),
-					4));
+					4)); // vein size
 
-	public static PlacedFeature ORE_NICKEL_DIORITE_PLACED = ORE_NICKEL_DIORITE.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(60)));
+	public static PlacedFeature ORE_NICKEL_DIORITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_NICKEL_DIORITE),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(60))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_DIORITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_DIORITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DIORITE),
 					DIORITE_ALUMINUM_ORE.getDefaultState(),
-					6));
+					6)); // vein size
 
-	public static PlacedFeature ORE_ALUMINUM_DIORITE_PLACED = ORE_ALUMINUM_DIORITE.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(40)));
+	public static PlacedFeature ORE_ALUMINUM_DIORITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_ALUMINUM_DIORITE),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(40))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TITANIUM_DIORITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TITANIUM_DIORITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DIORITE),
 					DIORITE_TITANIUM_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TITANIUM_DIORITE_PLACED = ORE_TITANIUM_DIORITE.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10)));
+	public static PlacedFeature ORE_TITANIUM_DIORITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TITANIUM_DIORITE),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_DIORITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_DIORITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.DIORITE),
 					DIORITE_TUNGSTEN_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TUNGSTEN_DIORITE_PLACED = ORE_TUNGSTEN_DIORITE.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(5)));
+	public static PlacedFeature ORE_TUNGSTEN_DIORITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TUNGSTEN_DIORITE),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(5))
+			)); // height
 
 	//Granite Ore Generation
-	private static ConfiguredFeature<?, ?> ORE_TIN_GRANITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TIN_GRANITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.GRANITE),
 					GRANITE_TIN_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_TIN_GRANITE_PLACED = ORE_TIN_GRANITE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_TIN_GRANITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TIN_GRANITE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_LEAD_GRANITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_LEAD_GRANITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.GRANITE),
 					GRANITE_LEAD_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_LEAD_GRANITE_PLACED = ORE_LEAD_GRANITE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_LEAD_GRANITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_LEAD_GRANITE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_SILVER_GRANITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_SILVER_GRANITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.GRANITE),
 					GRANITE_SILVER_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_SILVER_GRANITE_PLACED = ORE_SILVER_GRANITE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_SILVER_GRANITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_SILVER_GRANITE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_PLATINUM_GRANITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_PLATINUM_GRANITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.GRANITE),
 					GRANITE_PLATINUM_ORE.getDefaultState(),
-					1));
+					1)); // vein size
 
-	public static PlacedFeature ORE_PLATINUM_GRANITE_PLACED = ORE_PLATINUM_GRANITE.withPlacement(
-			CountPlacementModifier.of(1),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10)));
+	public static PlacedFeature ORE_PLATINUM_GRANITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_PLATINUM_GRANITE),
+			Arrays.asList(
+					CountPlacementModifier.of(1), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_NICKEL_GRANITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_NICKEL_GRANITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.GRANITE),
 					GRANITE_NICKEL_ORE.getDefaultState(),
-					4));
+					4)); // vein size
 
-	public static PlacedFeature ORE_NICKEL_GRANITE_PLACED = ORE_NICKEL_GRANITE.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(60)));
+	public static PlacedFeature ORE_NICKEL_GRANITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_NICKEL_GRANITE),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(60))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_GRANITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_GRANITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.GRANITE),
 					GRANITE_ALUMINUM_ORE.getDefaultState(),
-					6));
+					6)); // vein size
 
-	public static PlacedFeature ORE_ALUMINUM_GRANITE_PLACED = ORE_ALUMINUM_GRANITE.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(40)));
+	public static PlacedFeature ORE_ALUMINUM_GRANITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_ALUMINUM_GRANITE),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(40))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TITANIUM_GRANITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TITANIUM_GRANITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.GRANITE),
 					GRANITE_TITANIUM_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TITANIUM_GRANITE_PLACED = ORE_TITANIUM_GRANITE.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10)));
+	public static PlacedFeature ORE_TITANIUM_GRANITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TITANIUM_GRANITE),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_GRANITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_GRANITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.GRANITE),
 					GRANITE_TUNGSTEN_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TUNGSTEN_GRANITE_PLACED = ORE_TUNGSTEN_GRANITE.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(5)));
+	public static PlacedFeature ORE_TUNGSTEN_GRANITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TUNGSTEN_GRANITE),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(5))
+			)); // height
 
 	//Andesite Ore Generation
-	private static ConfiguredFeature<?, ?> ORE_TIN_ANDESITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TIN_ANDESITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.ANDESITE),
 					ANDESITE_TIN_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_TIN_ANDESITE_PLACED = ORE_TIN_ANDESITE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_TIN_ANDESITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TIN_ANDESITE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_LEAD_ANDESITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_LEAD_ANDESITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.ANDESITE),
 					ANDESITE_LEAD_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_LEAD_ANDESITE_PLACED = ORE_LEAD_ANDESITE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_LEAD_ANDESITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_LEAD_ANDESITE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_SILVER_ANDESITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_SILVER_ANDESITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.ANDESITE),
 					ANDESITE_SILVER_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_SILVER_ANDESITE_PLACED = ORE_SILVER_ANDESITE.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20)));
+	public static PlacedFeature ORE_SILVER_ANDESITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_SILVER_ANDESITE),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(20))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_PLATINUM_ANDESITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_PLATINUM_ANDESITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.ANDESITE),
 					ANDESITE_PLATINUM_ORE.getDefaultState(),
-					1));
+					1)); // vein size
 
-	public static PlacedFeature ORE_PLATINUM_ANDESITE_PLACED = ORE_PLATINUM_ANDESITE.withPlacement(
-			CountPlacementModifier.of(1),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10)));
+	public static PlacedFeature ORE_PLATINUM_ANDESITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_PLATINUM_ANDESITE),
+			Arrays.asList(
+					CountPlacementModifier.of(1), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_NICKEL_ANDESITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_NICKEL_ANDESITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.ANDESITE),
 					ANDESITE_NICKEL_ORE.getDefaultState(),
-					4));
+					4)); // vein size
 
-	public static PlacedFeature ORE_NICKEL_ANDESITE_PLACED = ORE_NICKEL_ANDESITE.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(60)));
+	public static PlacedFeature ORE_NICKEL_ANDESITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_NICKEL_ANDESITE),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(60))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_ANDESITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_ANDESITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.ANDESITE),
 					ANDESITE_ALUMINUM_ORE.getDefaultState(),
-					6));
+					6)); // vein size
 
-	public static PlacedFeature ORE_ALUMINUM_ANDESITE_PLACED = ORE_ALUMINUM_ANDESITE.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(40)));
+	public static PlacedFeature ORE_ALUMINUM_ANDESITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_ALUMINUM_ANDESITE),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(20), YOffset.fixed(40))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TITANIUM_ANDESITE = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TITANIUM_ANDESITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.ANDESITE),
 					ANDESITE_TITANIUM_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TITANIUM_ANDESITE_PLACED = ORE_TITANIUM_ANDESITE.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10)));
+	public static PlacedFeature ORE_TITANIUM_ANDESITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TITANIUM_ANDESITE),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(10))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_ANDESITE = Feature.ORE
-			.configure(new OreFeatureConfig(
-					new BlockMatchRuleTest(Blocks.STONE),
+	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_ANDESITE = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
+					new BlockMatchRuleTest(Blocks.ANDESITE),
 					ANDESITE_TUNGSTEN_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TUNGSTEN_ANDESITE_PLACED = ORE_TUNGSTEN_ANDESITE.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(5)));
+	public static PlacedFeature ORE_TUNGSTEN_ANDESITE_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TUNGSTEN_ANDESITE),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(5))
+			)); // height
 
 	//Nether Ore Generation
-	private static ConfiguredFeature<?, ?> ORE_TIN_NETHER = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TIN_NETHER = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.NETHERRACK),
 					NETHER_TIN_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_TIN_NETHER_PLACED = ORE_TIN_NETHER.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_TIN_NETHER_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TIN_NETHER),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_LEAD_NETHER = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_LEAD_NETHER = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.NETHERRACK),
 					NETHER_LEAD_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_LEAD_NETHER_PLACED = ORE_LEAD_NETHER.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_LEAD_NETHER_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_LEAD_NETHER),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_SILVER_NETHER = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_SILVER_NETHER = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.NETHERRACK),
 					NETHER_SILVER_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_SILVER_NETHER_PLACED = ORE_SILVER_NETHER.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_SILVER_NETHER_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_SILVER_NETHER),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_PLATINUM_NETHER = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_PLATINUM_NETHER = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.NETHERRACK),
 					NETHER_PLATINUM_ORE.getDefaultState(),
-					1));
+					1)); // vein size
 
-	public static PlacedFeature ORE_PLATINUM_NETHER_PLACED = ORE_PLATINUM_NETHER.withPlacement(
-			CountPlacementModifier.of(1),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(96), YOffset.fixed(128)));
+	public static PlacedFeature ORE_PLATINUM_NETHER_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_PLATINUM_NETHER),
+			Arrays.asList(
+					CountPlacementModifier.of(1), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(96), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_NICKEL_NETHER = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_NICKEL_NETHER = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.NETHERRACK),
 					NETHER_NICKEL_ORE.getDefaultState(),
-					4));
+					4)); // vein size
 
-	public static PlacedFeature ORE_NICKEL_NETHER_PLACED = ORE_NICKEL_NETHER.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_NICKEL_NETHER_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_NICKEL_NETHER),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_NETHER = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_NETHER = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.NETHERRACK),
 					NETHER_ALUMINUM_ORE.getDefaultState(),
-					6));
+					6)); // vein size
 
-	public static PlacedFeature ORE_ALUMINUM_NETHER_PLACED = ORE_ALUMINUM_NETHER.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_ALUMINUM_NETHER_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_ALUMINUM_NETHER),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TITANIUM_NETHER = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TITANIUM_NETHER = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.NETHERRACK),
 					NETHER_TITANIUM_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TITANIUM_NETHER_PLACED = ORE_TITANIUM_NETHER.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(96), YOffset.fixed(128)));
+	public static PlacedFeature ORE_TITANIUM_NETHER_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TITANIUM_NETHER),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(96), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_NETHER = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_NETHER = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.NETHERRACK),
 					NETHER_TUNGSTEN_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TUNGSTEN_NETHER_PLACED = ORE_TUNGSTEN_NETHER.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(16)));
+	public static PlacedFeature ORE_TUNGSTEN_NETHER_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TUNGSTEN_NETHER),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(16))
+			)); // height
 
 	//End Ore Generation
-	private static ConfiguredFeature<?, ?> ORE_TIN_END = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TIN_END = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.END_STONE),
 					END_TIN_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_TIN_END_PLACED = ORE_TIN_END.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_TIN_END_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TIN_END),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_LEAD_END = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_LEAD_END = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.END_STONE),
 					END_LEAD_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_LEAD_END_PLACED = ORE_LEAD_END.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_LEAD_END_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_LEAD_END),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_SILVER_END = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_SILVER_END = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.END_STONE),
 					END_SILVER_ORE.getDefaultState(),
-					8));
+					8)); // vein size
 
-	public static PlacedFeature ORE_SILVER_END_PLACED = ORE_SILVER_END.withPlacement(
-			CountPlacementModifier.of(5),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_SILVER_END_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_SILVER_END),
+			Arrays.asList(
+					CountPlacementModifier.of(5), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_PLATINUM_END = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_PLATINUM_END = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.END_STONE),
 					END_PLATINUM_ORE.getDefaultState(),
-					1));
+					1)); // vein size
 
-	public static PlacedFeature ORE_PLATINUM_END_PLACED = ORE_PLATINUM_END.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_PLATINUM_END_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_PLATINUM_END),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(64), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_NICKEL_END = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_NICKEL_END = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.END_STONE),
 					END_NICKEL_ORE.getDefaultState(),
-					4));
+					4)); // vein size
 
-	public static PlacedFeature ORE_NICKEL_END_PLACED = ORE_NICKEL_END.withPlacement(
-			CountPlacementModifier.of(4),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_NICKEL_END_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_NICKEL_END),
+			Arrays.asList(
+					CountPlacementModifier.of(4), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_END = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_END = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.END_STONE),
 					END_ALUMINUM_ORE.getDefaultState(),
-					6));
+					6)); // vein size
 
-	public static PlacedFeature ORE_ALUMINUM_END_PLACED = ORE_ALUMINUM_END.withPlacement(
-			CountPlacementModifier.of(3),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_ALUMINUM_END_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_ALUMINUM_END),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TITANIUM_END = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TITANIUM_END = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.END_STONE),
 					END_TITANIUM_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TITANIUM_END_PLACED = ORE_TITANIUM_END.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128)));
+	public static PlacedFeature ORE_TITANIUM_END_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TITANIUM_END),
+			Arrays.asList(
+					CountPlacementModifier.of(3), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(128))
+			)); // height
 
-	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_END = Feature.ORE
-			.configure(new OreFeatureConfig(
+	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_END = new ConfiguredFeature
+			(Feature.ORE, new OreFeatureConfig(
 					new BlockMatchRuleTest(Blocks.END_STONE),
 					END_TUNGSTEN_ORE.getDefaultState(),
-					3));
+					3)); // vein size
 
-	public static PlacedFeature ORE_TUNGSTEN_END_PLACED = ORE_TUNGSTEN_END.withPlacement(
-			CountPlacementModifier.of(2),
-			SquarePlacementModifier.of(),
-			HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(64)));
+	public static PlacedFeature ORE_TUNGSTEN_END_PLACED = new PlacedFeature(
+			RegistryEntry.of(ORE_TUNGSTEN_END),
+			Arrays.asList(
+					CountPlacementModifier.of(2), // number of veins per chunk
+					SquarePlacementModifier.of(), // spreading horizontally
+					HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.fixed(64))
+			)); // height
 
 	@Override
 	public void onInitialize() {
