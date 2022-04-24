@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " R ",
+    " C ",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:clay_ball"
+    },
+    "R": {
+      "tag": "ymetallib:rollers"
+    }
+  },
+  "result": {
+    "item": "ymetallib:clay_blank_mold",
+    "count": 1
+  }
+}

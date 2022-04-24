@@ -1,0 +1,19 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:copper_ingot",
+        "minecraft:iron_ingot",
+        "minecraft:gold_ingot",
+        "ymetallib:tin_ingot",
+        "ymetallib:bronze_ingot",
+        "ymetallib:silver_ingot",
+        "ymetallib:platinum_ingot",
+        "ymetallib:nickel_ingot",
+        "ymetallib:invar_ingot",
+        "ymetallib:electrum_ingot",
+        "ymetallib:steel_ingot",
+        "ymetallib:aluminum_ingot",
+        "ymetallib:titanium_ingot",
+        "ymetallib:tungsten_ingot"
+    ]
+}

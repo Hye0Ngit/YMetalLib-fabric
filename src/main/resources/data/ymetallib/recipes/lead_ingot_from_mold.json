@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "ymetallib:solid_lead_ingot_molds"
+    }
+  ],
+  "result": {
+    "item": "ymetallib:lead_ingot",
+    "count": 1
+  }
+}

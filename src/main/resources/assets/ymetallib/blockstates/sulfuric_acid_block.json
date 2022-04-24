@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": { "model": "ymetallib:block/sulfuric_acid_block" },
+    "level=0": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=1": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=2": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=3": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=4": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=5": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=6": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=7": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=8": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=9": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=10": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=11": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=12": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=13": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=14": { "model": "ymetallib:block/sulfuric_acid_flowing"},
+    "level=15": { "model": "ymetallib:block/sulfuric_acid_flowing"}
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ymetallib:tin_ceramic_ingot_mold"
+    },
+    {
+      "tag": "ymetallib:water_one_bucket"
+    }
+  ],
+  "result": {
+    "item": "ymetallib:solid_tin_ceramic_ingot_mold",
+    "count": 1
+  }
+}

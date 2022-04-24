@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    
+    "YMLibMixin"
   ],
   "injectors": {
     "defaultRequire": 1

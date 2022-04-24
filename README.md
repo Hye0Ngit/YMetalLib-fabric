@@ -4,7 +4,7 @@
 Adds Aluminum, Bronze, Copper, Electrum, Gold, Invar, Lead, Nickel, Platinum, Silver, Steel, Tin Ingots, Plates, Ores, Nuggets, Dusts, Mixtures to alloy, Carbon Dust for steelmaking, etc.
 
 # Requirement for build
-**Java Version: 16.0.2 or higher**
+**Java Version: 17 or higher** (Mod files are built on 1.17.3, so 1.17.3 is recommended)
 
 **IDE: Eclipse or IntelliJ IDEA or Visual Studio Code**
 

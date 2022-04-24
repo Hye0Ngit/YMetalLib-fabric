@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "ymetallib:clay_blank_mold"
+  },
+  "result": "ymetallib:ceramic_blank_mold",
+  "experience": 1.00,
+  "cookingtime": 100
+}

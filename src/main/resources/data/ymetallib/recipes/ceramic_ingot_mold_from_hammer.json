@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " H ",
+    " SI",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "ymetallib:ceramic_blank_mold"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "I": {
+      "tag": "c:ingots"
+    },
+    "H": {
+      "tag": "ymetallib:hammers"
+    }
+  },
+  "result": {
+    "item": "ymetallib:ceramic_ingot_mold",
+    "count": 1
+  }
+}

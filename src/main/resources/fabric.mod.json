@@ -10,7 +10,7 @@
   ],
   "contact": {
     "homepage": "https://www.yewonmvn.kro.kr",
-    "sources": "https://github.com/Hye0Ngit/ymetallib"
+    "sources": "https://github.com/Hye0Ngit/YMetalLib-fabric"
   },
 
   "license": "MIT",
@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "kr.kro.yewonmods.ymetallib.Main"
+    ],
+    "client": [
+      "kr.kro.yewonmods.ymetallib.MainClient"
     ]
   },
   "mixins": [
@@ -27,7 +30,7 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.13.2",
+    "fabricloader": ">=0.14.1",
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"

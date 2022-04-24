@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "ymetallib:solid_lead_tin_can"
+  },
+  "result": "ymetallib:lead_tin_can",
+  "experience": 2.00,
+  "cookingtime": 5
+}

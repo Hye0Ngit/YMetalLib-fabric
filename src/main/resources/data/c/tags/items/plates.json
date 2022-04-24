@@ -1,0 +1,19 @@
+{
+    "replace": false,
+    "values": [
+        "ymetallib:copper_plate",
+        "ymetallib:iron_plate",
+        "ymetallib:gold_plate",
+        "ymetallib:tin_plate",
+        "ymetallib:bronze_plate",
+        "ymetallib:silver_plate",
+        "ymetallib:platinum_plate",
+        "ymetallib:nickel_plate",
+        "ymetallib:invar_plate",
+        "ymetallib:electrum_plate",
+        "ymetallib:steel_plate",
+        "ymetallib:aluminum_plate",
+        "ymetallib:titanium_plate",
+        "ymetallib:tungsten_plate"
+    ]
+}

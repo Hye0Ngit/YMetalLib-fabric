@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " H ",
+    " SP",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "ymetallib:ceramic_blank_mold"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "P": {
+      "tag": "c:plates"
+    },
+    "H": {
+      "tag": "ymetallib:hammers"
+    }
+  },
+  "result": {
+    "item": "ymetallib:ceramic_plate_mold",
+    "count": 1
+  }
+}

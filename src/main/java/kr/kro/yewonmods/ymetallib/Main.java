@@ -1,5 +1,6 @@
 package kr.kro.yewonmods.ymetallib;
 
+import kr.kro.yewonmods.ymetallib.fluids.SulfuricAcid;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -8,7 +9,9 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.FluidBlock;
 import net.minecraft.block.Material;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.*;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.Identifier;
@@ -18,10 +21,7 @@ import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.CountPlacementModifier;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
@@ -34,10 +34,11 @@ public class Main implements ModInitializer {
 			new Identifier("ymetallib", "ymetallib_group"),
 			() -> new ItemStack(Items.IRON_INGOT));
 
-	//Hammer Wrench
+	//Hammer Wrench Roller
 	public static final Item HAMMER = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
 	public static final Item WRENCH = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
-	
+	public static final Item ROLLER = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+
 	//Blocks
 	public static final Block TIN_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(1.5F).requiresTool());
 	public static final Block BRONZE_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(2.5F).requiresTool());
@@ -127,6 +128,12 @@ public class Main implements ModInitializer {
 	public static final Item IRON_PLATE = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
 	public static final Item GOLD_PLATE = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
 
+	//Fluids
+	public static FlowableFluid SULFURIC_ACID_STILL;
+	public static FlowableFluid SULFURIC_ACID_FLOWING;
+	public static Item SULFURIC_ACID_BUCKET;
+	public static Block SULFURIC_ACID_BLOCK;
+
 	//Tin Cans
 	public static final Item SULFURIC_ACID_TIN_CAN = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
 	public static final Item TIN_CAN = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
@@ -137,6 +144,42 @@ public class Main implements ModInitializer {
 	public static final Item LAVA_TIN_CAN_ONE_THIRD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
 	public static final Item LAVA_TIN_CAN_TWO_THIRD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
 	public static final Item LAVA_TIN_CAN = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+
+	//Solid Metal Tin Cans
+	public static final Item SOLID_TIN_TIN_CAN_ONE_THIRD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item SOLID_TIN_TIN_CAN_TWO_THIRD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item SOLID_TIN_TIN_CAN = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item SOLID_LEAD_TIN_CAN_ONE_THIRD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item SOLID_LEAD_TIN_CAN_TWO_THIRD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item SOLID_LEAD_TIN_CAN = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+
+	//Molten Metal Tin Cans
+	public static final Item TIN_TIN_CAN_ONE_THIRD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item TIN_TIN_CAN_TWO_THIRD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item TIN_TIN_CAN = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item LEAD_TIN_CAN_ONE_THIRD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item LEAD_TIN_CAN_TWO_THIRD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item LEAD_TIN_CAN = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+
+	//Molds
+	public static final Item CLAY_BLANK_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item CERAMIC_BLANK_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item CLAY_INGOT_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item CERAMIC_INGOT_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item CLAY_PLATE_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item CERAMIC_PLATE_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+
+	//Solid Metal Molds
+	public static final Item SOLID_TIN_CERAMIC_INGOT_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item SOLID_LEAD_CERAMIC_INGOT_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item SOLID_TIN_CERAMIC_PLATE_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item SOLID_LEAD_CERAMIC_PLATE_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+
+	//Molten Metal Molds
+	public static final Item TIN_CERAMIC_INGOT_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item LEAD_CERAMIC_INGOT_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item TIN_CERAMIC_PLATE_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
+	public static final Item LEAD_CERAMIC_PLATE_MOLD = new Item(new FabricItemSettings().group(Main.YMETALLIBGROUP));
 
 	//Ores
 	public static final Block TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F).requiresTool());
@@ -1005,7 +1048,8 @@ public class Main implements ModInitializer {
 		//Hammer Wrench
 		Registry.register(Registry.ITEM, new Identifier("ymetallib", "hammer"), HAMMER);
 		Registry.register(Registry.ITEM, new Identifier("ymetallib", "wrench"), WRENCH);
-		
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "roller"), ROLLER);
+
 		//Blocks
 		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "tin_block"), TIN_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "bronze_block"), BRONZE_BLOCK);
@@ -1108,6 +1152,13 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("ymetallib", "iron_plate"), IRON_PLATE);
 		Registry.register(Registry.ITEM, new Identifier("ymetallib", "gold_plate"), GOLD_PLATE);
 
+		//Fluids
+		SULFURIC_ACID_STILL = Registry.register(Registry.FLUID, new Identifier("ymetallib", "sulfuric_acid_still"), new SulfuricAcid.Still());
+		SULFURIC_ACID_FLOWING = Registry.register(Registry.FLUID, new Identifier("ymetallib", "sulfuric_acid_flowing"), new SulfuricAcid.Flowing());
+		SULFURIC_ACID_BUCKET = Registry.register(Registry.ITEM, new Identifier("ymetallib", "sulfuric_acid_bucket"),
+		new BucketItem(SULFURIC_ACID_STILL, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+		SULFURIC_ACID_BLOCK = Registry.register(Registry.BLOCK, new Identifier("ymetallib", "sulfuric_acid_block.json"), new FluidBlock(SULFURIC_ACID_STILL, FabricBlockSettings.copy(Blocks.LAVA)){});
+
 		//Tin Cans
 		Registry.register(Registry.ITEM, new Identifier("ymetallib", "sulfuric_acid_tin_can"), SULFURIC_ACID_TIN_CAN);
 		Registry.register(Registry.ITEM, new Identifier("ymetallib", "tin_can"), TIN_CAN);
@@ -1118,6 +1169,42 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("ymetallib", "lava_tin_can_one_third"), LAVA_TIN_CAN_ONE_THIRD);
 		Registry.register(Registry.ITEM, new Identifier("ymetallib", "lava_tin_can_two_third"), LAVA_TIN_CAN_TWO_THIRD);
 		Registry.register(Registry.ITEM, new Identifier("ymetallib", "lava_tin_can"), LAVA_TIN_CAN);
+
+		//Solid Metal Tin Cans
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "solid_tin_tin_can_one_third"), SOLID_TIN_TIN_CAN_ONE_THIRD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "solid_tin_tin_can_two_third"), SOLID_TIN_TIN_CAN_TWO_THIRD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "solid_tin_tin_can"), SOLID_TIN_TIN_CAN);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "solid_lead_tin_can_one_third"), SOLID_LEAD_TIN_CAN_ONE_THIRD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "solid_lead_tin_can_two_third"), SOLID_LEAD_TIN_CAN_TWO_THIRD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "solid_lead_tin_can"), SOLID_LEAD_TIN_CAN);
+
+		//Molten Metal Tin Cans
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "tin_tin_can_one_third"), TIN_TIN_CAN_ONE_THIRD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "tin_tin_can_two_third"), TIN_TIN_CAN_TWO_THIRD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "tin_tin_can"), TIN_TIN_CAN);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "lead_tin_can_one_third"), LEAD_TIN_CAN_ONE_THIRD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "lead_tin_can_two_third"), LEAD_TIN_CAN_TWO_THIRD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "lead_tin_can"), LEAD_TIN_CAN);
+
+		//Molds
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "clay_blank_mold"), CLAY_BLANK_MOLD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "ceramic_blank_mold"), CERAMIC_BLANK_MOLD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "clay_ingot_mold"), CLAY_INGOT_MOLD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "ceramic_ingot_mold"), CERAMIC_INGOT_MOLD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "clay_plate_mold"), CLAY_PLATE_MOLD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "ceramic_plate_mold"), CERAMIC_PLATE_MOLD);
+
+		//Solid Metal Molds
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "solid_tin_ceramic_ingot_mold"), SOLID_TIN_CERAMIC_INGOT_MOLD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "solid_lead_ceramic_ingot_mold"), SOLID_LEAD_CERAMIC_INGOT_MOLD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "solid_tin_ceramic_plate_mold"), SOLID_TIN_CERAMIC_PLATE_MOLD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "solid_lead_ceramic_plate_mold"), SOLID_LEAD_CERAMIC_PLATE_MOLD);
+
+		//Molten Metal Molds
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "tin_ceramic_ingot_mold"), TIN_CERAMIC_INGOT_MOLD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "lead_ceramic_ingot_mold"), LEAD_CERAMIC_INGOT_MOLD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "tin_ceramic_plate_mold"), TIN_CERAMIC_PLATE_MOLD);
+		Registry.register(Registry.ITEM, new Identifier("ymetallib", "lead_ceramic_plate_mold"), LEAD_CERAMIC_PLATE_MOLD);
 
 		//Ores
 		Registry.register(Registry.BLOCK, new Identifier("ymetallib", "tin_ore"), TIN_ORE);
